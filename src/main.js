@@ -9,7 +9,17 @@ Vue.directive('highlight', {
         if(binding.modifiers['delayed']) {
             delay = 5000;
         }
-        
+        /*
+            this is what we call 'awesome'
+            setTimeout() is a javascript function
+            above
+            we checked if we have a modifier in the 
+            custom made directive
+            here, modifier is a string object
+            if we have a modifier then the value of delay will set to 3sec
+            then the color of background is changed 
+            to what the user has given
+        */
         setTimeout(() => {
             if(binding.arg == 'background'){
             el.style.backgroundColor = binding.value;
